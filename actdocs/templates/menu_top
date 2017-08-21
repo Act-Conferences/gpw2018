@@ -1,0 +1,139 @@
+[% FILTER collapse %]
+
+<div class="container-fluid">
+    <div class="navbar-header clearfixafter">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#gpwNavbar">
+            <span class="sr-only"><t><de>Navigation ein-/ausschalten</de><en>Toggle navigation</en></t></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hidden-xs hidden-sm hidden-md hidden-lg" href="index.html" title="<t><de>Startseite Deutscher Perl-Workshop</de><en>Home German Perl Workshop</en></t> 2017">
+            <span class="sitetitle"><t><de>Deutscher Perl-Workshop</de><en>German Perl Workshop</en></t></span><span class="year"> 2017</span>
+        </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="gpwNavbar">
+        <ul class="nav navbar-nav">
+            <li class="hidden-smx hidden-md hidden-lg activex start first lv1">
+                <a href="index.html" title="<t><de>Startseite</de><en>Home</en></t>">
+                    <t><de>Startseite</de><en>Home</en></t>
+                </a>
+            </li>
+            <li class="dropdown workshop lv1">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                    <t><de>Workshop</de><en>Conference</en></t> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <!--<li><a href="index.html"><t><de>Start</de><en>Home</en></t> [% global.conference.name %]</a></li>-->
+                    
+                    <li><a href="venue.html"><t><de>Veranstaltungsort</de><en>Venue</en></t></a></li>
+
+                    <li>
+                        <a href="[% make_uri('talks') %]"><t><de>Vorträge</de><en>Talks</en></t></a>
+                        <ul>
+                            <li class="lv3">
+                                <a href="[% make_uri('wanted.html') %]"><t><de>Vorschläge für Vorträge</de><en>Talk Suggestions</en></t></a>
+                            </li>                    
+                            <li class="lv3">
+                                <a href="[% make_uri('newtalk') %]"><t><de>Vortrag einreichen</de><en>Submit a talk proposal</en></t></a>
+                            </li>                        
+                        </ul>
+                    </li> 
+                                      
+                    
+                    <li><a href="[% make_uri('preise.html') %]"><t><de>Ticket-Preise</de><en>Ticket Prices</en></t></a></li>
+
+
+                    <li>
+                        <a href="[% make_uri('stats') %]"><t><de>Teilnehmer</de><en>Attendees</en></t></a>
+                        <ul>
+                            <li class="lv3">
+                                <a href="[% make_uri('search') %]"><t><de>Benutzer Suchen</de><en>Users - Search</en></t></a>
+                            </li>                    
+                            <li class="lv3">
+                                <a href="[% make_uri('stats') %]"><t><de>Benutzer Statistik</de><en>Users - Statistics</en></t></a>
+                            </li>                        
+                        </ul>
+                    </li> 
+
+                    
+                    <li><a href="[% make_uri('hotels.html') %]"><t><de>Hotels &amp; Anreise</de><en>Hotels &amp; Arrivals</en></t></a></li>
+                    <li>
+                        <a href="[% make_uri('wiki') %]"><t><de>Wiki</de><en>Wiki</en></t></a>
+                        <ul>
+                            <li class="lv3">
+                                <a href="[% make_uri('wiki') %]"><t><de>Deutscher Perl-Workshop</de><en>German Perl Workshop</en></t></a>
+                            </li>                    
+                            <li class="lv3">
+                                <a href="[% make_uri('wiki?node=VorabendTreffen') %]"><t><de>Vorabend-Treffen</de><en>Pre-Conference Meeting</en></t></a>
+                            </li>                        
+                        </ul>
+                    </li>
+
+                    <li><a href="status.html"><t><de>Status</de><en>Status</en></t></a></li>
+                    <li><a href="press.html"><t><de>Presse</de><en>Press</en></t></a></li>
+                </ul>
+            </li>
+            <li class="dropdown schedule lv1">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                    <t><de>Programm</de><en>Schedule</en></t> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="[% make_uri('schedule') %]"><t><de>Programm 2017</de><en>Schedule 2017</en></t></a>
+                        <ul>
+                            <li class="lv3">
+                                <a href="[% make_uri('timetable.ics') %]"><t><de>als iCal exportieren</de><en>iCal export</en></t></a>
+                            </li>                    
+                        </ul>
+                    </li> 
+
+                    <li><a href="[% make_uri('favtalks') %]"><t><de>Vorträge - Favorite Talks</de><en>Presentations - Favorite Talks</en></t></a></li>
+                </ul>
+            </li>           
+            <li class="news lv1">
+                <a href="news"><t><de>News</de><en>News</en></t></a>
+            </li>
+            <li class="dropdown sponsoring lv1">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                    <span class="visible-sm-inline-block visible-md-inline-block"><t><de>Sponsoring</de><en>Sponsoring</en></t></span><span class="hidden-sm hidden-md"><t><de>Unterstützen/Sponsoren</de><en>Sponsoring/Sponsors</en></t></span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="sponsoring.html"><t><de>Sponsor werden</de><en>Becoming a sponsor</en></t></a></li><!--Unterstützen/Sponsoring-->
+                    <li><a href="sponsors.html"><t><de>Workshop Sponsoren</de><en>Conference sponsors</en></t></a></li>
+                </ul>
+            </li>                    
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="register lv1">
+                [% IF global.request.user.has_registered %]
+                    <a href="[% make_uri('main') %]"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                     <t><de>Profil</de><en>Profile</en></t>
+                    </a>                
+                [% ELSE %] 
+                    <a href="[% make_uri('register') %]"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                     <t><de>Registrieren</de><en>Sign Up</en></t>
+                    </a>   
+                [% END %]
+            </li>
+            <li class="login lv1">
+                [% IF global.request.user.has_registered %]
+                    <a href="[% make_uri('logout') %]"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                     <t><de>Logout</de><en>Log out</en></t>
+                    </a>                
+                [% ELSE %] 
+                    <a href="[% make_uri('main') %]"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                     <t><de>Login</de><en>Log in</en></t>
+                    </a>   
+                [% END %]
+            </li>
+            <li class="langchanger lv1"><!--todo:languagechanger link via perl-->
+                <a href="?<t><de>language=en</de><en>language=de</en></t>"><span class="glyphicon glyphicon-flag"></span> <t><de>EN</de><en>DE</en></t></a>
+            </li>
+        </ul>
+    </div>
+</div>    
+
+[% END %]

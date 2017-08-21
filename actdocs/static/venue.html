@@ -1,0 +1,49 @@
+[% WRAPPER ui title = global.conference.name %]
+
+
+    <h2><t><de>Veranstaltungsort</de><en>Venue</en></t></h2>
+
+    <style type="text/css">#basicMap { /*width: 600px;*/ height: 500px; margin: 0;width: 100%; margin-bottom: 30px !important; }</style>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
+    <div id="basicMap"></div>
+    <p><t>
+      <de>
+        Der Deutsche Perl-Workshop 2017 findet im <strong>Bürgerhaus Wilhelmsburg</strong>,
+        Mengestraße 20, 21107 Hamburg nahe dem Zentrum von Hamburg statt.<br />
+        Die Anreise kann sehr gut mit öffentlichen Verkehrsmitteln erfolgen.
+        Die S-Bahn-Haltestelle (S3 S31) <strong>Hamburg-Wilhelmsburg</strong> ist nur 800 Meter entfernt.
+      </de>
+      <en>
+        The German Perl Workshop 2017 will take place in <strong>Bürgerhaus Wilhelmsburg</strong>,
+        Mengestraße 20, 21107 Hamburg, near the centre of Hamburg.<br />
+        We have an excellent public transport system in Hamburg and the next
+        local train station (S3 S31) <strong>Hamburg-Wilhelmsburg</strong> is only 800 meters away.
+      </en>
+    </t></p>
+    <p>
+        <a href="hotels.html">
+            →
+            <t>
+                <de>Nahverkehr und Parken am Veranstaltungsort</de>
+                <en>Public transport and parking at venue</en>
+            </t>
+        </a>
+    </p>
+
+    <script type="text/javascript">
+      function init() {
+        map = new OpenLayers.Map("basicMap");
+        var mapnik = new OpenLayers.Layer.OSM();
+        map.addLayer(mapnik);
+		var lonLat = new OpenLayers.LonLat(9.995782, 53.500269)
+			.transform(
+				new OpenLayers.Projection("EPSG:4326"),
+				map.getProjectionObject()
+		);
+        map.setCenter(lonLat, 16); // Zoom level
+      }
+      init();
+    </script>
+
+[% END %]

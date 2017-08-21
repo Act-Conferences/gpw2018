@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="[% global.request.language %]">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no"> 
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <base href="[% make_uri('') %]" target="_top">
+    <title>[% global.conference.name %]</title>
+    <meta name="description"      content="<t><de>Der Deutsche Perl-Workshop ist eine jährlich in Deutschland stattfindende Konferenz von und für Entwickler der Programmiersprache Perl.</de><en>The German Perl Workshop is a conference about the Perl Programming Language. It is organized by Perl developers.</en></t>">
+    <meta name="keywords"         content="Perl,Workshop,<t><de>Konferenz,Deutschland,Entwickler,Programmiersprache</de><en>Conference,Germany,Developer,Programming language</en></t>">
+    <meta name="application-name" content="ACT GPW2017">
+    <meta name="author"           content="Erlangen.pm, Perleone">
+    <meta name="generator"        content="act.yapc.eu">
+
+
+  	<!-- Latest compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  	<!-- Optional theme -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script type="text/javascript" src="scripts/modernizr.js"></script>	
+  	<!--removed because included in bootstrap <link rel="stylesheet" type="text/css" href="styles/normalize.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <!--<link rel="stylesheet" type="text/css" href="styles/oldcolors.css">-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+  </head>
+
+
+  <body class="no-fixed-header">
+
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    <header id="header" class="block rowx">
+      <div class="headerContent col-xs-12 no-float">
+        <a class="homelink clearfixafter" href="index.html" title="[% global.conference.name %]">
+          <div id="logo" class="col-xs-3"></div>
+          <h1 id="site_name" class="col-xs-7">[% global.conference.name %]</h1>
+        </a>
+      </div>
+  
+	  
+
+      <div id="menustorage" class="hiddenx">
+      	<div class="elemWrapper">
+
+
+          <nav id="navtop" class="navbar navbar-default navbar-inverse gpw navbar-fixed-topx navbar-static-top bootstrap hiddenx" role="navigation">
+            [% PROCESS menu_top %]
+          </nav>
+
+
+      	</div>
+      </div>	  
+ 	 
+       
+    </header>
+
+
+
+    <div id="content"  class="block rowx">
+
+
+      <section id="document" class="col-sm-9 col-md-8">
+        [% content %]
+
+         <div id="socialshareprivacy" class="social_share_privacy"></div>
+      </section>
+
+      <aside id="sidebar" class="col-sm-3 col-md-4">
+
+        <!--id:otherworkshops-->
+        <section id="archivnav" class="elemWrapper archivWrapper">
+          <h2><t><de>gpw-Archiv</de><en>Archive of gpw</en></t></h2>  
+          <form id="archiv_form" action="#">  
+            <fieldset class="form-group"><!--style="display: inline-block;float: right;"-->
+              <label for="archiv"><t><de>Workshop</de><en>Conference</en></t>:</label>    
+              <select class="selectpicker form-control" id="archiv"><!--style="display: inline-block;width: auto;"-->
+                <option value="index.html" selected="selected">2017</option>
+                <option value="http://act.yapc.eu/gpw2016/">2016</option>
+                <option value="http://act.yapc.eu/gpw2015/">2015</option>
+                <option value="http://act.yapc.eu/gpw2014/">2014</option>
+                <option value="http://act.yapc.eu/gpw2013/">2013</option>
+                <option value="http://conferences.yapceurope.org/gpw2012/">2012</option>
+                <option value="http://conferences.yapceurope.org/gpw2011/">2011</option>
+                <option value="http://conferences.yapceurope.org/gpw2010/">2010</option>
+                <option value="http://www.perl-workshop.de/de/2009/">2009</option>
+                <option value="http://www.perl-workshop.de/de/2008/">2008</option>
+                <option value="http://www.perl-workshop.de/de/2007/">2007</option>
+                <option value="http://www.perl-workshop.de/de/2006/">2006</option>
+                <option value="http://www.perl-workshop.de/de/2005/">2005</option>
+                <option value="http://www.perl-workshop.de/de/2004/">2004</option>
+                <option value="http://www.perl-workshop.de/de/2003/">2003</option>
+                <option value="http://www.perl-workshop.de/de/2002/">2002</option>
+                <option value="http://www.perl-workshop.de/de/2001/">2001</option>
+                <option value="http://www.perl-workshop.de/de/2000/">2000</option>
+                <option value="http://www.perl-workshop.de/de/1999/">1999</option>
+              </select>
+            </fieldset>
+          </form>
+        </section> 
+
+        <nav id="mainnav">
+          <h2><t><de>Dieser Workshop</de><en>This conference</en></t></h2>
+          <ul class="mainnav">
+            [% PROCESS menu %]
+          </ul>
+        </nav>
+        <!--
+        <section class="sidesponsors">
+          <h2><t><de>Gold-Sponsoren</de><en>Gold sponsors</en></t></h2>
+          <ul class="sidesponsors">
+            <li><a href="http://www.delti.com/" title="Delticom AG"><img src="images/logo-delticom.gif" alt="Delticom AG"></a></li>
+            <li><a href="http://www.profihost.com/" title="Profihost AG"><img src="images/logo-profihost.png" alt="Profihost AG"></a></li>
+          </ul>
+        </section>
+        <section class="sidesponsors">
+          <h2><t><de>Silber-Sponsoren</de><en>Silver sponsors</en></t></h2>
+          <ul class="sidesponsors">
+            <li><a href="javascript:;">Link</a></li>
+            <li><a href="javascript:;">Link</a></li>
+            <li><a href="javascript:;">Link</a></li>
+          </ul>
+        </section>
+        <section class="sidesponsors">
+          <h2><t><de>Bronze-Sponsoren</de><en>Bronce sponsors</en></t></h2>
+          <ul class="sidesponsors">
+            <li><a href="javascript:;">Link</a></li>
+            <li><a href="javascript:;">Link</a></li>
+            <li><a href="javascript:;">Link</a></li>
+          </ul>
+        </section>
+        -->
+        <section>
+          <h2><t><de>Andere ACT Konferenzen</de><en>Other ACT conferences</en></t></h2>
+          <ul class="mainnav">
+            [% PROCESS menus/act_confs %]
+          </ul>
+        </section>
+      </aside>
+
+
+      <div id="content_clearing"></div>
+    </div>
+
+
+    <footer id="footer">
+      <p class="links">
+        <a class="link first" href="impressum.html"><t><de>Impressum</de><en>Imprint</en></t></a>
+        <a class="link last email icon-envelope" href="mailto:orga-gpw2017@list.cluster-team.com" title="<t><de>Kontakt</de><en>Contact</en></t>">orga-gpw2017@list.cluster-team.com</a>
+      </p>
+    </footer>
+		<script type="text/javascript">
+			var lang_iso = '<t><de>de_DE</de><en>en_US</en></t>';
+			var lang_lc = '<t><de>de</de><en>en</en></t>';
+			var lang_uc = '<t><de>DE</de><en>EN</en></t>';
+			//var stylechoose = '<t><de>Farben ändern</de><en>Change colors</en></t>';
+		</script>
+    <script type="text/javascript" src="scripts/jquery.js" defer></script>
+    <script type="text/javascript" src="scripts/jquery-migrate.js" defer></script>
+
+  	<!-- Latest compiled and minified JavaScript -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" defer></script>
+
+    <script type="text/javascript" src="scripts/jquery.socialshareprivacy.js" defer></script>
+    <script type="text/javascript" src="scripts/jquery.cookie.js" defer></script>
+    <script type="text/javascript" src="scripts/base.js" defer></script>
+    <script type="text/javascript" src="/js/act.js" defer></script>	
+	
+  </body>
+</html>
+

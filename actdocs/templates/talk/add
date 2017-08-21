@@ -1,0 +1,311 @@
+[% WRAPPER ui title = loc("Submit/Edit a talk") %]
+
+<h2>Test ReneeB</h2>
+
+
+
+[% PROCESS error
+   msgs = {
+     ERR_USER           => loc("You must specify a user"),
+     ERR_TITLE          => loc("You must enter a title for the talk"),
+     ERR_ABSTRACT       => loc("You must provide an abstract"),
+     ERR_DATE           => loc("The supplied date is invalid"),
+     ERR_TIME           => loc("The supplied time is invalid"),
+     ERR_DATERANGE      => loc("The date/time is out of range"),
+     ERR_DURATION       => loc("Please choose a duration"),
+     ERR_URL_ABSTRACT   => loc("Abstract URL is not a valid URL"),
+     ERR_URL_TALK       => loc("Talk URL is not a valid URL"),
+     ERR_ROOM           => loc("Incorrect room submitted"),
+     ERR_LEVEL          => loc("Please choose a target audience"),
+     ERR_LANG           => loc("Incorrect language"),
+  }
+%]
+
+<form method="POST" action="[% global.request.r.uri %]" class="form_addTalk form-horizontal clearfix">
+
+  [% IF return_url %]
+    <input type="hidden" name="return_url" value="[% return_url %]" />
+  [% END %]
+
+  [% IF talk_id %]
+    <input type="hidden" name="talk_id" value="[% talk_id %]" />
+    <p>
+     {{View}}
+     <a href="[% make_uri_info('talk', talk_id) %]" class="talkTitle" >[% title %]</a>
+    </p>
+    <div class="form-group">
+      <div class="col-sm-3 control-label">&nbsp;</div>
+      <div class="col-sm-9 checkbox"> 
+        <label>
+          <input type="checkbox" name="delete"> {{Delete this talk}}
+        </label>
+      </div>  
+    </div>    
+  [% END %]
+
+
+
+
+
+  [% IF global.request.user.is_talks_admin %]
+
+    <div class="form-group">
+      <label for="user_id" class="col-sm-3 control-label">{{User}}</label>
+      <div class="col-sm-9">
+        <select name="user_id" id="user_id" class="form-control"> 
+        [% uid = user_id ? user_id : global.request.user.user_id %]
+        [% FOREACH u=users %]          
+          <option value="[% u.user_id %]"[% ' selected="selected"' IF u.user_id == uid %]>
+            [% u.first_name %] [% u.last_name %]
+          </option>          
+        [% END %]                
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="date" class="col-sm-3 control-label">{{Date}}</label>
+      <div class="col-sm-9">
+        <select name="date" id="date" class="form-control">
+            <option value=""[% ' selected="selected"' UNLESS datetime %] />
+         [% FOREACH d=dates %]
+            <option value="[% d.ymd %]"[% ' selected="selected"' IF datetime.ymd == d.ymd %]>[% d.ymd %]</option>
+         [% END %]
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="time" class="col-sm-3 control-label">{{Time}}</label>
+      <div class="col-sm-9">        
+        <input type="text" name="time" id="time" value="[% datetime.strftime('%H:%M') %]" size="5" maxlength="5" placeholder="hh:mm" class="form-control" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="room" class="col-sm-3 control-label">{{Room}}</label>
+      <div class="col-sm-9">
+        <select name="room" id="room" class="form-control">        
+          <option value=""[% ' selected="selected"' UNLESS room %] />
+        [% FOREACH r = rooms.keys.sort %]
+          <option value="[% r %]"[% ' selected="selected"' IF room == r %]>[% rooms.$r %]</option>
+        [% END %]
+        </select>
+      </div>
+    </div>
+
+  [% END %]
+
+
+  <div class="form-group">
+    <label for="title" class="col-sm-3 control-label">{{Title}}</label>
+    <div class="col-sm-9">
+      <input type="text" name="title" id="title" value="[% title %]" size="51" maxlength="100" class="form-control" />
+    </div>
+  </div>
+
+
+
+
+
+  [% IF tracks.size != 0 %]
+    [% IF global.request.user.is_talks_admin %]
+      <div class="form-group">
+        <label for="track_id" class="col-sm-3 control-label">{{Track}}</label>
+        <div class="col-sm-9">
+          <select name="track_id" id="track_id" class="form-control">       
+             <option value=""[% ' selected="selected"' UNLESS track_id %] />
+           [% FOREACH t=tracks %]
+             <option value="[% t.track_id %]"[% ' selected="selected"' IF t.track_id == track_id %]>[% t.title %]</option>
+           [% END %]
+           </select>
+        </div>
+      </div>
+    [% ELSE %]
+      <input type="hidden" name="track_id" value="[% track_id %]" />
+    [% END %]
+  [% END %]
+
+
+  <div class="form-group">
+    <label for="tags" class="col-sm-3 control-label">{{Tags}}</label>
+    <div class="col-sm-9">
+      <input type="text" name="tags" id="tags" value="[% tags %]" size="51" maxlength="100" class="form-control" />
+    </div>
+  </div>
+
+
+  [% IF global.config.talks_languages %]
+      <div class="form-group">
+        <label for="lang" class="col-sm-3 control-label">{{Language}}</label>
+        <div class="col-sm-9">
+          <select name="lang" id="lang" size="1" class="form-control">
+            <option value=""[% ' selected="selected"' UNLESS lang %] />
+          [% FOREACH lg = global.config.talks_languages.keys.sort %]
+            <option value="[% lg %]"[% ' selected="selected"' IF lang==lg %]>[% global.config.talks_languages.$lg %]</option>
+          [% END %]              
+          </select>
+        </div>
+      </div>  
+  [% END %]
+
+
+  <div class="form-group">
+    <div class="col-sm-3 control-label">{{Hide details}}</div>
+    <div class="col-sm-9 checkbox">   
+      <label>
+        <input type="checkbox" name="hide_details"[% ' checked' IF hide_details %] /> {{Check the box to hide the abstract and URLs, and to only show the teaser until this talk happens.}}        
+      </label>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="teaser" class="col-sm-3 control-label">{{Teaser}} <span class="nobr">{{(plain text)}}</span></label>
+    <div class="col-sm-9">
+      <textarea name="teaser" id="teaser" class="form-control" rows="10">[% teaser | form_unescape %]</textarea>
+    </div>
+  </div>  
+
+  <div class="form-group">
+    <label for="abstract" class="col-sm-3 control-label">{{Abstract}} <span class="nobr">{{(plain text)}}</span></label>
+    <div class="col-sm-9">
+      <textarea name="abstract" id="abstract" class="form-control" rows="10">[% abstract | form_unescape %]</textarea>
+    </div>
+  </div>  
+
+
+  <div class="form-group">
+    <label for="url_abstract" class="col-sm-3 control-label">{{Abstract URL}}</label>
+    <div class="col-sm-9">
+      <input type="text" name="url_abstract" id="url_abstract" value="[% url_abstract %]" size="51" maxlength="256" class="form-control" />
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="url_talk" class="col-sm-3 control-label">{{Talk URL}}</label>
+    <div class="col-sm-9">
+      <input type="text" name="url_talk" id="url_talk" value="[% url_talk %]" size="51" maxlength="256" class="form-control" />
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-3 control-label">{{Allow recording}}</div>
+    <div class="col-sm-9 checkbox">   
+      <label>
+        <input type="checkbox" name="allow_record" id="allow_record"[% ' checked' IF allow_record %] /> {{Check the box to indicate you agree for this talk to be recorded.}}          
+      </label>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">{{Video URLs}}</label>
+    <div class="col-sm-9">
+      <input type="text" name="url_video1" id="url_video1" value="[% url_video1 %]" size="51" maxlength="256" class="form-control" placeholder="Video URL 1" />
+      <input type="text" name="url_video2" id="url_video2" value="[% url_video2 %]" size="51" maxlength="256" class="form-control" placeholder="Video URL 2" />
+      <input type="text" name="url_video3" id="url_video3" value="[% url_video3 %]" size="51" maxlength="256" class="form-control" placeholder="Video URL 3" />
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="duration" class="col-sm-3 control-label">{{Duration}}</label>
+    <div class="col-sm-9 checkbox">
+
+      [% IF global.request.user.is_talks_admin %]
+        <div class="hint">
+          [% loc("Standard durations for <confname> are:", global.conference.name) %]
+          <b>[% global.config.talks_durations.keys.nsort.join('</b>, <b>') %]</b> {{minutes}}       
+        </div>        
+
+        <input type="text" name="duration" id="duration" value="[% duration == 'lightning' ? '' : duration %]" size="3"  maxlength="3" class="form-control" />
+        <label>
+          <input type="checkbox" name="is_lightning" id="is_lightning"[% ' checked' IF duration=='lightning' %] /> {{Lightning talk}} 
+        </label>        
+      [% ELSE %]
+        [% IF talk_id %]
+          [% IF duration == 'lightning' %]
+              {{Lightning talk}}
+          [% ELSE %]
+              [% duration %] {{minutes}}
+          [% END %]
+        [% ELSE %]
+            <select name="duration" id="duration" class="form-control">
+             <option value=""[% ' selected="selected"' UNLESS duration %] />
+             <option value="lightning"[% ' selected="selected"' IF lightning %]>
+                {{Lightning talk}}
+             </option>
+             [% FOREACH d = global.config.talks_durations.keys.nsort %]
+             <option value="[% d %]"[% ' selected="selected"' IF d == duration %]>[% d %] {{minutes}}</option>
+             [% END %]
+             {{If the proposed durations do not quite fit your talk, please}}
+            </select>
+        [% END %]
+      [% END %]                
+    </div>
+  </div>
+
+
+
+  [% IF global.config.talks_levels %]
+    <div class="form-group">
+      <label for="level" class="col-sm-3 control-label">{{Target audience}}</label>
+      <div class="col-sm-9">
+        <select name="level" id="level" class="form-control">   
+             [% FOREACH levelname = global.config.talks_levels_names %]
+               <option value="[% loop.count %]"[% ' selected="selected"' IF level == loop.count %]>[% levelname %]</option>
+             [% END %]
+        </select>
+      </div>
+    </div>       
+  [% END %]
+
+
+  <div class="form-group">
+    <label for="comment" class="col-sm-3 control-label">{{Comments}}</label>
+    <div class="col-sm-9">
+      <div class="hint">{{The comment field is used for communicating information about}}</div>
+      <textarea name="comment" id="comment" class="form-control" rows="3">[% comment | form_unescape %]</textarea>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-3 control-label">{{Status}}</div>
+    <div class="col-sm-9 checkbox">   
+      [% IF global.request.user.is_talks_admin %]
+        <label class="visible-xs-block visible-sm-block visible-md-block visible-lg-block">
+          <input type="checkbox" name="accepted" id="accepted"[% ' checked' IF accepted %] /> {{accepted}}
+        </label>
+        <label class="visible-xs-block visible-sm-block visible-md-block visible-lg-block">
+          <input type="checkbox" name="confirmed" id="confirmed"[% ' checked' IF confirmed %] /> {{confirmed}}           
+        </label>  
+      [% ELSE %]
+        [% IF accepted %]
+          <label class="visible-xs-block visible-sm-block visible-md-block visible-lg-block">
+            {{Accepted}}<br />
+            <input type="checkbox" name="confirmed"[% ' checked' IF confirmed %] /> {{confirmed}}
+          </label>          
+        [% ELSE %]
+          <label class="visible-xs-block visible-sm-block visible-md-block visible-lg-block">
+            {{Pending}}
+          </label>            
+        [% END %]
+      [% END %]
+    </div>
+  </div>
+
+  <div class="form-group pull-right">
+    <div class="col-sm-9">
+      <input type="submit" name="submit" value="{{Submit this talk}}" class="btn btn-primary" />
+    </div>
+  </div>
+
+
+</form>
+
+[% END %]
+

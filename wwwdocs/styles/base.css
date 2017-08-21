@@ -1,0 +1,715 @@
+html {
+  font-family: "Trebuchet MS",sans-serif;
+  font-size: 11pt;
+  line-height: 1.5em;
+  background-color: #36393D;
+}
+body,
+body.no-fixed-header {
+  max-width:940px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+body.fixed-header {
+  padding-top:50px;
+}
+@media (min-width: 768px) {
+}
+@media(min-width: 992px) {
+}
+@media(min-width:1200px) {
+}
+/*headercontent überall ausblenden*/
+body.fixed-header #header .headerContent {
+  display:none;
+}
+/*header brand bei xs einblenden. bei > xs nicht, da dort startseitenlink vorhanden ist*/
+@media (max-width: 767px) {
+  body.fixed-header #header a.navbar-brand {
+    display: block !important;
+  }
+}
+#header {
+  color: #FFFFFF;
+  background-color: #333366;
+}
+#header.fixed,
+body.fixed-header #header { 
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    z-index: 1030;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+
+    margin: 0 auto;
+    max-width: 940px;  
+}
+.h1, .h2, .h3, h1, h2, h3 { /*bootstrap überschreiben*/
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+#logo {
+  float: left;
+  background: transparent url(../images/karawane-logo-transparent-weiss.png) left top no-repeat;
+  background-size: contain;
+  max-width: 165px;
+  min-height: 42px; 
+  max-height: 72px; 
+  margin-top: 0;
+}
+@media(min-width:768px){
+  #logo {
+    min-height: 58px;
+    margin-top:5px;
+  }
+}
+@media(min-width:992px){
+  #logo {
+    min-height: 72px;
+    margin-top:5px;
+  }
+}
+#header h1 {
+  margin: 0;
+  padding: 1em;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: right;
+  padding-right: 0;
+  float: right;  
+}
+@media (min-width: 768px) {
+  #header h1 {
+    font-size:1.5em;
+  }
+}
+@media(min-width:992px){
+  #header h1 {
+    font-size:2.5em;
+  }
+}
+#header a:link,
+#header a:visited {
+  color: #FFFFFF;
+}
+#menustorage .navbar {
+  margin-bottom:0;
+}
+#menustorage .navbar-brand {
+  float: left;
+  display: inline-block;  
+}
+@media(max-width:767px){
+  #menustorage .navbar-header span {
+      font-size: 12px;
+  }
+}
+#topnav_clearing {
+  clear: left;
+}
+#content {
+  padding: 2em 0;
+}
+#sidebar nav,
+#sidebar section {
+  margin: 0 0 1em;
+  padding: 0 0 0.4em;
+  background-color: #F9F7ED;
+}
+#sidebar h2 {
+  margin: 0;
+  padding: 0.4em;
+  font-size: 1.2em;
+  color: #FFFFFF;
+  background-color: #36393D;
+}
+ul.mainnav {
+  margin: 0;
+  padding: 0.5em;
+  list-style: inside none;
+}
+ul.mainnav li.child {
+  margin-left: 1em;
+}
+ul.mainnav li.section {
+  margin: 1em 0 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.sidesponsors ul {
+  margin: 0;
+  padding: 0;
+  list-style: inside none;
+}
+.sidesponsors li {
+  text-align: center;
+}
+.sidesponsors img {
+  max-width: 85%;
+}
+#document {
+}
+@media(min-width:768px){
+  #document {
+    padding-left:30px;
+  }
+}
+#document table {
+  text-align: left;
+}
+body.ui_light #document {
+  width: inherit;
+  margin: 0;
+}
+#content_clearing {
+  clear: left;
+}
+#footer {
+  padding: 1px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #333366;/*gpwblue*/
+}
+#footer a:link,
+#footer a:visited {
+  color: #FFFFFF;
+}
+#footer p.links {
+  padding: 10px 0 0 0;
+}
+#footer p.links a.link {
+    display: inline-block;
+    padding: 5px;
+}
+#footer p.links a.link:after {
+    content: "|";
+    display: inline-block;
+    width: 1em;
+    margin-left: 1em;
+}
+#footer p.links a.link.last:after {
+    content: "";
+}
+/* Fixes for Wiki */
+textarea[name="content"] {
+  width: 99%;
+}
+#header .headerContent a.homelink {
+  display:block;
+}
+#header .headerContent a.homelink:hover #logo,
+#header .headerContent a.homelink:focus #logo {
+    opacity: 0.8;
+}
+#header .headerContent a.homelink:hover h1,
+#header .headerContent a.homelink:focus h1 {
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+.archivWrapper form {
+  text-align:right;
+  padding: 7px;
+}
+.archivWrapper form .form-group {
+    margin-bottom: 0;
+}
+.archivWrapper select.form-control {
+  display: inline-block;
+  width: auto;
+}
+.clearfixafter:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.no-float {
+  float:none;
+}
+/*damit content und sidebar ausgeglichen sind*/
+section#document h2:first-child, 
+section#document h3:first-child,
+section#document h4:first-child {
+    margin-top: 0;
+}
+#document article.a-sponsor {
+  margin-bottom:30px;
+}
+#menustorage .navbar-nav li.lv3 > a:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+
+  content: "\f054";/*chevron-right*/
+  text-decoration: none;
+  margin-right: 0.5em;
+  font-size: 8px;
+  line-height: 17px;
+  vertical-align: text-top;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+#document .icon-envelope:before,
+#footer .icon-envelope:before {
+  margin-right:0.25em;
+} 
+/*i:after{ content: '\2022';}*/
+#document .videoblock .embed-responsive.withmargin {
+  margin-bottom:20px;
+}
+#document .videoblock .videolistWrapper ul {
+  list-style:none;
+  padding-left: 15px;
+}
+#document .videoblock .videolistWrapper ul li {
+}
+#document .videoblock .videolistWrapper ul li a {
+  padding-left: 1em;
+  display: block;
+}
+#document .videoblock .videolistWrapper ul li a:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+
+  content: "\f1c8";/*fa-file-video-o*/
+
+  width: 1em;
+  margin-left: -1.25em;  
+  margin-right: 0;
+}
+#document .conferencedata {
+  text-align:center;
+}
+#document .conferencedata span.conference {
+  display: block;
+}
+
+
+article.news-entry {
+    margin-bottom: 10px;
+}
+
+/*touchlinks benötigen mehr platz*/
+aside#sidebar a {
+    display: block;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0.25em;
+}
+/*for floating elements*/
+section#document, 
+aside#sidebar {
+    margin-bottom: 50px;
+}
+footer#footer {
+    padding-bottom: 50px;
+}
+
+/*hier überschreiben damit orig script austauschbar bleibt*/
+.social_share_privacy {
+  margin-top: 50px;
+  margin-bottom: 30px; 
+  text-align: center;
+}
+.social_share_privacy .social_share_privacy_area {
+  width: auto;
+  height: auto;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  display: inline-block;
+}
+.social_share_privacy .social_share_privacy_area {
+  height:auto;
+}
+.social_share_privacy .social_share_privacy_area li.help_info,
+.social_share_privacy .social_share_privacy_area li.facebook,
+.social_share_privacy .social_share_privacy_area li.twitter,
+.social_share_privacy .social_share_privacy_area li.gplus,
+.social_share_privacy .social_share_privacy_area li.settings_info { 
+}
+.social_share_privacy .social_share_privacy_area li.help_info {
+  width: 33% !important;/*width: auto;*/
+  padding-right: 15px !important;
+}
+  .social_share_privacy .social_share_privacy_area li.help_info.display .info, 
+  .social_share_privacy .social_share_privacy_area li .help_info.icon.display .info {
+      z-index:1100;
+  }
+.social_share_privacy .social_share_privacy_area li.facebook {
+  width: 132px !important;  
+}
+.social_share_privacy .social_share_privacy_area li.twitter {
+  width: 104px !important;  
+}
+.social_share_privacy .social_share_privacy_area li.gplus {
+  width: 68px !important;
+  padding-right: 0 !important; 
+}
+.social_share_privacy .social_share_privacy_area li.settings_info {
+  padding-right: 0 !important;
+  /*top:0;*/
+  width: auto;
+  top: 8px;
+  width: 100%;
+  display: block;
+  height: 21px;
+}
+  .social_share_privacy .social_share_privacy_area li.settings_info .settings_info_menu {
+    width: 100%;
+    min-width:135px;
+    max-width: 400px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+.social_share_privacy .social_share_privacy_area li div.tweet,
+.social_share_privacy .social_share_privacy_area li div.gplusone {
+  width:auto;
+}
+.error {
+  color:red;
+  font-weight:bold;
+}
+form.separated {
+  margin-top:25px;
+  margin-bottom:25px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  aside#sidebar {
+    font-size: 0.8em;  
+  }  
+}
+@media (min-width: 992px) {
+  aside#sidebar {
+    font-size: 0.9em;  
+  }
+}
+/*
+menu - sm-devices 2 lines;
+*/
+@media(max-width:767px){}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {}
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {}
+/* Large desktops and laptops */
+@media (min-width: 1200px) {}
+
+@media(max-width: @screen-xs-max){}
+@media(min-width: @screen-sm-min){}  
+@media(min-width: @screen-md-min){}  
+@media(min-width: @screen-lg-min){}
+
+/* menu - sm-devices 2 lines;*/
+@media (min-width: 768px) and (max-width: 991px) {
+  #menustorage nav.navbar .navbar-header,
+  #menustorage nav.navbar #gpwNavbar {
+    display: block;
+    float: none; 
+  } 
+} 
+/*alternative zu hidden-sm - einblenden im background*/
+@media (min-width: 768px) and (max-width: 991px) {
+    .register .glyphicon,
+    .login .glyphicon {
+        position: absolute; 
+        top: 10px;
+        left: 2px;
+        color: transparent;/*fallback*/
+        color: rgba(255,255,255,0.2);
+        font-size: 30px;   
+    }
+}
+@media (min-width: 768px) {
+  #menustorage .navbar-nav .dropdown-menu {
+    min-width:280px;
+  }
+}
+#menustorage .navbar-nav>li>.dropdown-menu li ul {
+  list-style: none;
+  padding:0;
+}
+.xxx .caret {
+    float: right;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-top-width: 20px;
+}
+/*caret über link*/
+#menustorage .navbar-nav > .dropdown > a {
+  z-index:2;
+}
+#menustorage .navbar-nav > .dropdown > a .caret {
+    z-index:3;
+}
+/*lv2 und lv3 links auf selbe höhe bringen*/
+#menustorage .navbar-nav .open .dropdown-menu .dropdown-header,
+#menustorage .navbar-nav .open .dropdown-menu>li>a, 
+#menustorage .navbar-nav .open .dropdown-menu li a {
+    padding: 5px 15px 5px 25px;
+    display: block;
+}
+/*einrückung lv3*/ 
+#menustorage .navbar-nav .dropdown-menu li ul li.lv3 a {
+    padding-left: 45px;
+}
+/*bootstrap überschreiben*/
+#menustorage .navbar-nav ul li a:active,
+#menustorage .navbar-nav ul li a:focus,
+#menustorage .navbar-nav .dropdown-menu>li>a:focus, 
+#menustorage .navbar-nav .dropdown-menu>li>a:hover,
+#menustorage .navbar-nav .dropdown-menu li a:focus, 
+#menustorage .navbar-nav .dropdown-menu li a:hover {
+  text-decoration:underline;
+}
+@media (max-width: 767px) {
+  /*jeder link onclick feedback*/
+  #menustorage .navbar-nav ul li a {
+    text-decoration:none;
+  }
+  #menustorage .navbar-nav ul li a:active,
+  #menustorage .navbar-nav ul li a:focus {
+    text-decoration: overline underline;
+  }
+}
+/*
+re-color inverse menu
+src:http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3;
+*/
+/* navbar */
+/*
+gpwblue #333366
+gpwbluemediumdark #232343
+gpwbluedark #121221
+fast-weiss #ddd
+*/
+/*gradient löschen*/
+#menustorage .navbar-inverse.gpw,
+#menustorage .navbar-inverse.gpw .navbar-nav>.active>a, 
+#menustorage .navbar-inverse.gpw .navbar-nav>.open>a,
+#menustorage .dropdown-menu>li>a:focus, 
+#menustorage .dropdown-menu>li>a:hover {
+    background-image:none;
+    background:none;  
+    filter: ;/*reset*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important;
+    background-repeat:no-repeat;
+}
+#menustorage .navbar-inverse.gpw {
+    background-color: #333366;/*gpwblue*/
+    border-color: #232343;/*gpwbluemediumdark*/
+    z-index:1005;/*wegen openstreet map controls*/
+}
+/* title */
+#menustorage .navbar-inverse.gpw .navbar-brand,
+#menustorage .navbar-inverse.gpw .navbar-brand {
+    color: #fff;/*weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-brand:hover,
+#menustorage .navbar-inverse.gpw .navbar-brand:focus {
+    color: #ddd;/*fast-weiss*/
+}
+/* link */
+#menustorage .navbar-inverse.gpw .navbar-nav > li > a {
+    color: #fff;/*weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-nav > li > a:hover,
+#menustorage .navbar-inverse.gpw .navbar-nav > li > a:focus {
+    /*soll weiss bleiben*//*color: #ddd;*//*fast-weiss*/
+}
+/* menu - >= md hover effect bg color*/
+@media (min-width: 768px) {
+  #menustorage .navbar-inverse.gpw .navbar-nav>li:hover,
+  #menustorage .navbar-inverse.gpw .navbar-nav>li:focus {
+    background-color: #232343;/*gpwbluemediumdark*/
+  }
+} 
+#menustorage .navbar-inverse.gpw .navbar-nav > .active > a, 
+#menustorage .navbar-inverse.gpw .navbar-nav > .active > a:hover, 
+#menustorage .navbar-inverse.gpw .navbar-nav > .active > a:focus {
+    color: #fff;/*weiss #555;*/
+    background-color: #121221;/*gpwbluedark*/ 
+}
+#menustorage .navbar-inverse.gpw .navbar-nav > .open > a, 
+#menustorage .navbar-inverse.gpw .navbar-nav > .open > a:hover, 
+#menustorage .navbar-inverse.gpw .navbar-nav > .open > a:focus {
+    color: #232343;/*gpwbluemediumdark*/
+    background-color: #ddd;/*fast-weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-nav .open .dropdown-menu {
+  background-color: #333366;/*gpwblue*//*fallback*/
+  background: rgba(51, 51, 102, 0.98);/*gpwblue - transparent*/  
+}
+/* caret */
+#menustorage .navbar-inverse.gpw .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;/*weiss*/
+    border-bottom-color: #fff;/*weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-nav .dropdown-menu .divider {
+  background-color: #121221;/*gpwbluedark*/
+}
+#menustorage .navbar-inverse.gpw .navbar-nav > .dropdown > a:hover .caret,
+#menustorage .navbar-inverse.gpw .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #ddd;/*fast-weiss*/
+    border-bottom-color: #ddd;/*fast-weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-nav > .open > a .caret, 
+#menustorage .navbar-inverse.gpw .navbar-nav > .open > a:hover .caret, 
+#menustorage .navbar-inverse.gpw .navbar-nav > .open > a:focus .caret {
+    border-top-color: #121221;/*gpwbluedark*/ 
+    border-bottom-color: #121221;/*gpwbluedark*/ 
+}
+/* mobile version */
+#menustorage .navbar-inverse.gpw .navbar-toggle {
+    border-color: #ddd;/*fast-weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-toggle:hover,
+#menustorage .navbar-inverse.gpw .navbar-toggle:focus,
+#menustorage .navbar-inverse.gpw .navbar-toggle:active {
+    background-color: #ddd;/*fast-weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-toggle .icon-bar {
+    background-color: #ddd;/*fast-weiss*/
+}
+#menustorage .navbar-inverse.gpw .navbar-toggle:hover .icon-bar,
+#menustorage .navbar-inverse.gpw .navbar-toggle:focus .icon-bar,
+#menustorage .navbar-inverse.gpw .navbar-toggle:active .icon-bar {
+    background-color: #333366;/*gpwblue*/
+}
+
+
+/*mobil nav submenu*/
+@media (max-width: 767px) {
+    #menustorage .navbar-inverse.gpw .navbar-nav > li > a:hover,
+    #menustorage .navbar-inverse.gpw .navbar-nav > li > a:focus {
+        color: #ddd;/*fast-weiss*/
+    }  
+    #menustorage .navbar-inverse.gpw .navbar-nav .open .dropdown-menu > li > a {
+        color: #ddd;/*fast-weiss*//*green;*/
+    }
+    #menustorage .navbar-inverse.gpw .navbar-nav .open .dropdown-menu > li > a:hover,
+    #menustorage .navbar-inverse.gpw .navbar-nav .open .dropdown-menu > li > a:focus,
+    #menustorage .navbar-inverse.gpw .navbar-nav .open .dropdown-menu > li > a:active {
+        color: #fff;/*weiss*//*yellow;*/
+    }
+}
+
+/*fixierte navigation- ebenso body.fixed-header und somit #header .headerContent : display:none; transition; */
+#header { 
+}
+body.fixed-header #header {
+    margin-top: 52px; 
+}
+body.fixed-header #header .headerContent {
+    display:none; 
+}
+
+#header.fixed #menustorage .navbar-default.navbar-fixed-top {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media(min-width:992px){
+  #header.fixed #menustorage .navbar-default.navbar-fixed-top:before,
+  #header.fixed #menustorage .navbar-default.navbar-fixed-top:after {
+      background: #333366;/*gpwblue*/
+      height: 50px;
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 3000px;
+  }
+  #header.fixed #menustorage .navbar-default.navbar-fixed-top:before {
+      left: -3000px;
+  }
+  #header.fixed #menustorage .navbar-default.navbar-fixed-top:after {
+      right: -3000px; 
+  }
+}
+
+
+
+
+
+
+form.form_addTalk {
+}
+form.form_addTalk a.talkTitle {
+  text-align:center;
+}
+.nobr {
+  white-space: nowrap;
+}
+div.control-label {
+    font-weight: bold;
+}
+
+table.schedule-2 tr.header td a {
+  display:block;
+}
+table.schedule-2 tr.header td .star-count {
+  display: inline-block;
+  margin-left: 10px;
+}
+/****************
+Fragen / todos:;
+
+
+
+
+00) next: templates/user/purchase!!!
+
+
+;
+10.) OK so? Wo wird die Programm-Tabelle generiert? siehe http://act.yapc.eu/gpw2016/schedule -> schedule
+*) Todo Tabelle preise.html umbauen responsive
+ new--templates/talk/add
+ new--templates/talk/list
+ new--templates/talk/favorites
+
+
+*) Template zum Generieren des Usermenüs (PROCESS menus/user) vor und nach Einloggen benötigt - u.a. wegen Sprachwechsellink
+    01.) Wie kann ich per Template-Script den Sprachwechsellink generieren (aktuelle URL & parameter: &language=de oder en)?
+    02.) Hier steht im Deutschen "Logged as: USERNAME", dies sollte in Eingeloggt als geändert werden
+*) Todo Registrierform - wo ist das template mit der tabelle?: http://test.mongueurs.net/gpw2017/register/7cb9f7ebe73aa62b....
+*) http://test.mongueurs.net/gpw2017/main - personal page - template hat "make additional purchases" auch auf englisch drin stehen
+    02.) Wo ist das Template für die Einloggen-Seite bzw. das Login-Formular? http://test.mongueurs.net/gpw2017/main
+*) SharingFunction unten bedarf noch einer Korrektur. BF ist in EN zu breit
+*) Template für http://test.mongueurs.net/gpw2017/newtalk, denn da befindet sich, wenn man nicht eingeloggt ist, ein nicht-resp Formular für Login
+    03.) Wo ist die Vortrag-Einreichen Seite (mit Formular)? http://test.mongueurs.net/gpw2017/newtalk
+*) Template für http://test.mongueurs.net/gpw2017/changepwd
+    04.) Wo ist das Passwort-Vergessen-Formular? http://test.mongueurs.net/gpw2017/changepwd
+*) Wo ist [% showtags(tags, 'talks') %] definiert? Denn dort wird ein Formular gerneriert, welches ebenfalls nicht responsive ist
+*) Wo wird die Tabelle der Talks, welche hier angezeigt wird (http://test.mongueurs.net/gpw2017/talks), generiert?
+    07.) Wo wird die Vorträge-Tabelle generiert? http://test.mongueurs.net/gpw2017/talks
+    05.) Diese Tabelle ist noch nicht responsive und weiters ist die Checkbox (Talk zum personal schedule hinzufügen) da, aber kein Button zum Absenden des Formulars
+05.) Wo ist das Formular für die Teilnehmer-Suche? http://test.mongueurs.net/gpw2017/search
+06.) Wo ist die Tabelle Teilnehmerstatistik? http://test.mongueurs.net/gpw2017/stats
+09.) Wo wird die User-Bio-Tabelle generiert? siehe http://act.yapc.eu/gpw2016/user/1275
+*) Wo ist Template http://test.mongueurs.net/gpw2017/myschedule - responsive tabelle?;
+
+*****************/
