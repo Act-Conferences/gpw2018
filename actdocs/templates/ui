@@ -9,8 +9,8 @@
     <title>[% global.conference.name %]</title>
     <meta name="description"      content="<t><de>Der Deutsche Perl-Workshop ist eine jährlich in Deutschland stattfindende Konferenz von und für Entwickler der Programmiersprache Perl.</de><en>The German Perl Workshop is a conference about the Perl Programming Language. It is organized by Perl developers.</en></t>">
     <meta name="keywords"         content="Perl,Workshop,<t><de>Konferenz,Deutschland,Entwickler,Programmiersprache</de><en>Conference,Germany,Developer,Programming language</en></t>">
-    <meta name="application-name" content="ACT GPW2017">
-    <meta name="author"           content="Erlangen.pm, Perleone">
+    <meta name="application-name" content="ACT GPW2018">
+    <meta name="author"           content="Frankfurt Perlmongers">
     <meta name="generator"        content="act.yapc.eu">
 
 
@@ -81,7 +81,8 @@
             <fieldset class="form-group"><!--style="display: inline-block;float: right;"-->
               <label for="archiv"><t><de>Workshop</de><en>Conference</en></t>:</label>    
               <select class="selectpicker form-control" id="archiv"><!--style="display: inline-block;width: auto;"-->
-                <option value="index.html" selected="selected">2017</option>
+                <option value="index.html" selected="selected">2018</option>
+		<option value="http://act.yapc.eu/gpw2017/">2017</option>
                 <option value="http://act.yapc.eu/gpw2016/">2016</option>
                 <option value="http://act.yapc.eu/gpw2015/">2015</option>
                 <option value="http://act.yapc.eu/gpw2014/">2014</option>
@@ -152,7 +153,7 @@
     <footer id="footer">
       <p class="links">
         <a class="link first" href="impressum.html"><t><de>Impressum</de><en>Imprint</en></t></a>
-        <a class="link last email icon-envelope" href="mailto:orga-gpw2017@list.cluster-team.com" title="<t><de>Kontakt</de><en>Contact</en></t>">orga-gpw2017@list.cluster-team.com</a>
+        <a class="link last email icon-envelope" href="mailto:registration@german-perl-workshop.de" title="<t><de>Kontakt</de><en>Contact</en></t>">orga-gpw2017@list.cluster-team.com</a>
       </p>
     </footer>
 		<script type="text/javascript">
