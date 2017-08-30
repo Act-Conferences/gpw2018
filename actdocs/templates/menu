@@ -13,7 +13,7 @@
 
     [% PROCESS menus/talks %]
 
-    [%# PROCESS menus/news %]
+    [% PROCESS menus/news %]
 
     <!--
     <li class="section"><a href="[% make_uri('hotels.html') %]"><t><de>Hotels & Anreise</de><en>Hotels & arrival</en></t></a></li>
