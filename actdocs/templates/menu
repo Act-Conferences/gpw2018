@@ -1,35 +1,12 @@
 [% FILTER collapse %]
-
     [% PROCESS menus/user %]
-
-<!--
-    <span id="goto-lang" style="display: none;">
-    <li class="child"> <a href="/gpw2017/index.html?language=en">→&nbsp;English</a> </li> 
-    </span>
-
-    <li class="section"><a href="[% make_uri('preise.html') %]"><t><de>Ticket-Preise</de><en>Ticket Prices</en></t></a></li>
-    <li class="section"><a href="[% make_uri('wanted.html') %]"><t><de>Vorschläge für Vorträge</de><en>Talk suggestions</en></t></a></li>
--->
-
-    [% PROCESS menus/talks %]
-
-    [% PROCESS menus/news %]
-
-    <!--
-    <li class="section"><a href="[% make_uri('hotels.html') %]"><t><de>Hotels & Anreise</de><en>Hotels & arrival</en></t></a></li>
-    -->
-
-    [%# PROCESS menus/wiki %]
-    <!--
-    <li class="child"><a href="[% make_uri('wiki?node=VorabendTreffen') %]"><t><de>Vorabend-Treffen</de><en>Pre-Conference Meeting</en></t></a></li>
-    -->    
-
-    [%# PROCESS menus/users %]    
-
+    [% PROCESS menus/talks %] 
 [% END %]
 
 [% FILTER collapse %]
+    [% PROCESS menus/news %]
     [% PROCESS menus/events %]
     [% PROCESS menus/treasurer %]
     [% PROCESS menus/admin %]
+    [% PROCESS menus/users %]   
 [% END %]
