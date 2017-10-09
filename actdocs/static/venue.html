@@ -9,16 +9,25 @@
     <div id="basicMap"></div>
     <p><t>
       <de>
-        Der Deutsche Perl-Workshop 2017 findet im <strong>Bürgerhaus Wilhelmsburg</strong>,
-        Mengestraße 20, 21107 Hamburg nahe dem Zentrum von Hamburg statt.<br />
+        Der Deutsche Perl-Workshop 2018 findet an der <strong>FHDW</strong>,
+        Hauptstraße 2, 51465 Bergisch Gladbach, ca. 14 km östlich von Köln statt.<br />
         Die Anreise kann sehr gut mit öffentlichen Verkehrsmitteln erfolgen.
-        Die S-Bahn-Haltestelle (S3 S31) <strong>Hamburg-Wilhelmsburg</strong> ist nur 800 Meter entfernt.
+        Die S-Bahn-Linie (S 11) endet in Bergisch Gladbach 935,18 m (Luftline) entfernt von der FHDW, 
+		alternativ kann man die S-Bahn auch an der Station Duckterath verlassen um von dort 
+		1126,13 m (Luftlinie) zu gehen. Sollte das zu weit sein, das Wetter schlecht sein, ... gibt es 
+		die Möglichkeit mit einem Bus bis auf 391 m (Haltestelle Dechant-Müller-St.) an die FHDW heranzukommen.
       </de>
       <en>
         The German Perl Workshop 2017 will take place in <strong>Bürgerhaus Wilhelmsburg</strong>,
         Mengestraße 20, 21107 Hamburg, near the centre of Hamburg.<br />
         We have an excellent public transport system in Hamburg and the next
         local train station (S3 S31) <strong>Hamburg-Wilhelmsburg</strong> is only 800 meters away.
+      </en>
+      <de>
+        <strong>ACHTUNG: unsere Räume in der FHDW sind nicht Rollstuhl gerecht! Wir sind in der 3ten Etage, ohne Aufzug!</strong>
+      </de>
+      <en>
+        <strong>ATTENTION: the Venue is not suitable for wheelchairs! We will be on the 3rd floor without elevator!</strong>
       </en>
     </t></p>
     <p>
@@ -36,7 +45,7 @@
         map = new OpenLayers.Map("basicMap");
         var mapnik = new OpenLayers.Layer.OSM();
         map.addLayer(mapnik);
-		var lonLat = new OpenLayers.LonLat(9.995782, 53.500269)
+		var lonLat = new OpenLayers.LonLat(7.119581, 50.983874)
 			.transform(
 				new OpenLayers.Projection("EPSG:4326"),
 				map.getProjectionObject()
