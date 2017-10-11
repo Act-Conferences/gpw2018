@@ -1,5 +1,5 @@
 [% WRAPPER ui title = loc("Favorite Talks") %]
-<h2> Test Reneeb</h2>
+<h2>[% loc("Favorite Talks") %]</h2>
 <div class="table-responsive">
 <table border="1" cellspacing="0" cellpadding="4" class="table table-striped">
 <tr>

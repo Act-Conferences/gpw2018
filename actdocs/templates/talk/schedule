@@ -1,5 +1,5 @@
 [% WRAPPER ui title = loc('Schedule') %]
-<h2><de>Zeitplan</de><en>Schedule</en></h2>
+<h2>[% loc("Schedule") %]</h2>
 
 [% INCLUDE js/mytalks.js %]
 [% UNLESS ( global.request.user.is_talks_admin
