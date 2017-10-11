@@ -12,10 +12,10 @@ $(document).ready(function(){
   if ( lang_lc == 'en' ) fb_img = 'scripts/socialshareprivacy/images/dummy_facebook_en.png';
 
   $('#socialshareprivacy').socialSharePrivacy({
-    cookie_path: '/gpw2017/',
+    cookie_path: '/gpw2018/',
     cookie_expires: 91,
     css_path: 'scripts/socialshareprivacy/socialshareprivacy.css',
-    uri: 'http://act.yapc.eu/gpw2017/',
+    uri: 'http://act.yapc.eu/gpw2018/',
     txt_help: txt_help,
     settings_perma: settings_perma,
     services: {
@@ -58,14 +58,14 @@ $(document).ready(function(){
   $('#stylechoose').click(function(){
     if ( $('html').hasClass('oldcolors') ) {
       $('html').removeClass('oldcolors');
-      $.cookie('gpw2017.oldcolors', 0);
+      $.cookie('gpw2018.oldcolors', 0);
     }
     else {
       $('html').addClass('oldcolors');
-      $.cookie('gpw2017.oldcolors', 1);
+      $.cookie('gpw2018.oldcolors', 1);
     }
   });
-  if ( $.cookie('gpw2017.oldcolors') == '1' )
+  if ( $.cookie('gpw2018.oldcolors') == '1' )
     $('html').addClass('oldcolors');
   */
 
