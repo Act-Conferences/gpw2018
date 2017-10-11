@@ -8,8 +8,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand hidden-xs hidden-sm hidden-md hidden-lg" href="index.html" title="<t><de>Startseite Deutscher Perl-Workshop</de><en>Home German Perl Workshop</en></t> 2017">
-            <span class="sitetitle"><t><de>Deutscher Perl-Workshop</de><en>German Perl Workshop</en></t></span><span class="year"> 2017</span>
+        <a class="navbar-brand hidden-xs hidden-sm hidden-md hidden-lg" href="index.html" title="<t><de>Startseite Deutscher Perl-Workshop</de><en>Home German Perl Workshop</en></t> 2018">
+            <span class="sitetitle"><t><de>Deutscher Perl-Workshop</de><en>German Perl Workshop</en></t></span><span class="year"> 2018</span>
         </a>
     </div>
 
@@ -82,7 +82,7 @@
                 <ul class="dropdown-menu">
 
                     <li>
-                        <a href="[% make_uri('schedule') %]"><t><de>Programm 2017</de><en>Schedule 2017</en></t></a>
+                        <a href="[% make_uri('schedule') %]"><t><de>Programm 2018</de><en>Schedule 2018</en></t></a>
                         <ul>
                             <li class="lv3">
                                 <a href="[% make_uri('timetable.ics') %]"><t><de>als iCal exportieren</de><en>iCal export</en></t></a>
