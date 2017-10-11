@@ -8,16 +8,16 @@
 <meta itemprop="duration" content="P[% duration %]M">
 [% END %]
 <span itemprop="geo" itemscope itemtype="http://data-vocabulary.org/Geo">
-  <meta itemprop="latitude" content="52.375996">
-  <meta itemprop="longitude" content="9.710547">
+  <meta itemprop="latitude" content="50.983874">
+  <meta itemprop="longitude" content="7.119581">
 </span>
 <span itemprop="location" itemscope itemtype="http://data-vocabulary.org/Organization">
-  <meta itemprop="name" content="DATEV IT-Campus">
+  <meta itemprop="name" content="FHDW Bergisch-Gladbach">
   <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
-    <meta itemprop="street-address" content="Fürther Str. 111">
-    <meta itemprop="locality" content="Nürnberg">
-    <meta itemprop="postal-code" content="90429">
-    <meta itemprop="region" content="Bayern">
+    <meta itemprop="street-address" content="Hauptstraße 2">
+    <meta itemprop="locality" content="Bergisch-Gladbach">
+    <meta itemprop="postal-code" content="51465">
+    <meta itemprop="region" content="Nordrhein-Westfalen">
     <meta itemprop="country-name" content="Deutschland">
   </span>
 </span>
