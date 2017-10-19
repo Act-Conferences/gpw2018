@@ -1,6 +1,6 @@
 [% WRAPPER ui title = loc("Submit/Edit a talk") %]
 
-<h2><de>Vortrag einreichen</de><en>Submit a talk</en></h2>
+<h2>[% loc("Submit/Edit a talk") %]</h2>
 
 
 
