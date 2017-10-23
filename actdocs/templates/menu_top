@@ -64,18 +64,15 @@
                     <li><a href="[% make_uri('hotels.html') %]"><t><de>Hotels &amp; Anreise</de><en>Hotels &amp; Arrivals</en></t></a></li>
                     <li>
                         <a href="[% make_uri('wiki') %]"><t><de>Wiki</de><en>Wiki</en></t></a>
-                        <ul>
+<!--                        <ul>
                             <li class="lv3">
                                 <a href="[% make_uri('wiki') %]"><t><de>Deutscher Perl-Workshop</de><en>German Perl Workshop</en></t></a>
                             </li>                    
                             <li class="lv3">
                                 <a href="[% make_uri('wiki?node=VorabendTreffen') %]"><t><de>Vorabend-Treffen</de><en>Pre-Conference Meeting</en></t></a>
-                            </li>                        
+                            </li>                        -->
                         </ul>
                     </li>
-
-                    <li><a href="status.html"><t><de>Status</de><en>Status</en></t></a></li>
-                    <li><a href="press.html"><t><de>Presse</de><en>Press</en></t></a></li>
                 </ul>
             </li>
             <li class="dropdown schedule lv1">
