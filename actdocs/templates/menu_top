@@ -33,7 +33,7 @@
                         <a href="[% make_uri('talks') %]"><t><de>Vorträge</de><en>Talks</en></t></a>
                         <ul>
                             <li class="lv3">
-                                <a href="news/1527"><t>CfP</t></a>
+                                <a href="news/1527"><t><de>CfP</de><en>CfP</en></t></a>
                             </li>                    
                             <li class="lv3">
                                 <a href="[% make_uri('wanted.html') %]"><t><de>Vorschläge für Vorträge</de><en>Talk Suggestions</en></t></a>
