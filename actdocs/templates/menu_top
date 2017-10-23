@@ -70,8 +70,8 @@
                             </li>                    
                             <li class="lv3">
                                 <a href="[% make_uri('wiki?node=VorabendTreffen') %]"><t><de>Vorabend-Treffen</de><en>Pre-Conference Meeting</en></t></a>
-                            </li>                        -->
-                        </ul>
+                            </li>
+                        </ul> -->
                     </li>
                 </ul>
             </li>
