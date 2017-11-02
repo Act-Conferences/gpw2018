@@ -61,15 +61,6 @@ body.fixed-header #header {
   max-height: 72px; 
   margin-top: 0;
 }
-#logoNRPM {
-  float: right;
-  background: transparent url(../images/GPW-Logo_klein.png) left top no-repeat;
-  background-size: contain;
-  max-width: 165px;
-  min-height: 72px; 
-  max-height: 72px; 
-  margin-top: 0;
-}
 @media(min-width:768px){
   #logo {
     min-height: 58px;
@@ -78,6 +69,27 @@ body.fixed-header #header {
 }
 @media(min-width:992px){
   #logo {
+    min-height: 72px;
+    margin-top:5px;
+  }
+}
+#logoNRPM {
+  float: right;
+  background: transparent url(../images/GPW-Logo_klein.png) left top no-repeat;
+  background-size: contain;
+  max-width: 165px;
+  min-height: 42px; 
+  max-height: 72px; 
+  margin-top: 0;
+}
+@media(min-width:768px){
+  #logoNRPM {
+    min-height: 58px;
+    margin-top:5px;
+  }
+}
+@media(min-width:992px){
+  #logoNRPM {
     min-height: 72px;
     margin-top:5px;
   }
