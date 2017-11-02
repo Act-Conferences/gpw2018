@@ -61,6 +61,15 @@ body.fixed-header #header {
   max-height: 72px; 
   margin-top: 0;
 }
+#logoNRPM {
+  float: right;
+  background: transparent url(../images/GPW-Logo_klein.png) left top no-repeat;
+  background-size: contain;
+  max-width: 165px;
+  min-height: 42px; 
+  max-height: 72px; 
+  margin-top: 0;
+}
 @media(min-width:768px){
   #logo {
     min-height: 58px;
