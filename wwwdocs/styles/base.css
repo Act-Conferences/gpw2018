@@ -66,7 +66,7 @@ body.fixed-header #header {
   background: transparent url(../images/GPW-Logo_klein.png) left top no-repeat;
   background-size: contain;
   max-width: 165px;
-  min-height: 42px; 
+  min-height: 72px; 
   max-height: 72px; 
   margin-top: 0;
 }
