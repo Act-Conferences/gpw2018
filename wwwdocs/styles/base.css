@@ -73,6 +73,27 @@ body.fixed-header #header {
     margin-top:5px;
   }
 }
+#logoNRPM {
+  float: right;
+  background: transparent url(../images/GPW-Logo_klein.png) left top no-repeat;
+  background-size: contain;
+  max-width: 165px;
+  min-height: 42px; 
+  max-height: 72px; 
+  margin-top: 0;
+}
+@media(min-width:768px){
+  #logoNRPM {
+    min-height: 58px;
+    margin-top:5px;
+  }
+}
+@media(min-width:992px){
+  #logoNRPM {
+    min-height: 72px;
+    margin-top:5px;
+  }
+}
 #header h1 {
   margin: 0;
   padding: 1em;

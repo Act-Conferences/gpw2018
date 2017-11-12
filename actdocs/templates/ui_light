@@ -19,6 +19,7 @@
     <header id="header">
       <div id="logo"></div>
       <h1 id="site_name"><a href="index.html">[% global.conference.name %]</a></h1>
+      <div id="logoNRPM"></div>
     </header>
     <div id="content">
       <section id="document">

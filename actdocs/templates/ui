@@ -41,6 +41,7 @@
         <a class="homelink clearfixafter" href="index.html" title="[% global.conference.name %]">
           <div id="logo" class="col-xs-3"></div>
           <h1 id="site_name" class="col-xs-7">[% global.conference.name %]</h1>
+          <div id="logoNRPM" class="col-xs-3"></div>
         </a>
       </div>
   
