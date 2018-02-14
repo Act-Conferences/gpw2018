@@ -8,17 +8,17 @@
 
     <div id="basicMap"></div>
     <p>
-		<t>
-			<de>
-				Der Deutsche Perl-Workshop 2018 findet an der <strong>TH Köln, Campus Gummersbach</strong>,
-				in Gummersbach statt.
-			</de>
-			<en>
-				The German Perl Workshop 2018 will take place at <strong>TH Köln, Campus Gummersbach</strong>,
-				in Gummersbach.
-			</en>
-		</t>
-	</p>
+        <t>
+            <de>
+                Der Deutsche Perl-Workshop 2018 findet an der <strong>TH Köln, Campus Gummersbach</strong>,
+                in Gummersbach statt.
+            </de>
+            <en>
+                The German Perl Workshop 2018 will take place at <strong>TH Köln, Campus Gummersbach</strong>,
+                in Gummersbach.
+            </en>
+        </t>
+    </p>
     <p>
         <a href="hotels.html">
             →
@@ -34,11 +34,11 @@
         map = new OpenLayers.Map("basicMap");
         var mapnik = new OpenLayers.Layer.OSM();
         map.addLayer(mapnik);
-		var lonLat = new OpenLayers.LonLat(7.56212, 51.02338)
-			.transform(
-				new OpenLayers.Projection("EPSG:4326"),
-				map.getProjectionObject()
-		);
+        var lonLat = new OpenLayers.LonLat(7.56212, 51.02338)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"),
+                map.getProjectionObject()
+        );
         map.setCenter(lonLat, 16); // Zoom level
       }
       init();
