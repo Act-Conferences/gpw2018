@@ -1,0 +1,237 @@
+[% WRAPPER ui title = global.conference.name %]
+
+    <h2><t><de>Workshop: Perl on embedded Devices</de><en>Workshop: Perl on embedded devices</en></t></h2>
+
+    <p><t>
+        <de>Das Ziel dieses Workshops ist es, den Teilnehmern den sicheren Umgang von Softwarenetwicklung und -bereitstellung auf IoT-Geräten zu vermitteln. Außerdem soll von vornherein auf Nicht-Funktionale Anforderungen wie Security-Updates eingegangen werden.</de>
+	<en>As goal of this workshop the participants learn the safe and reliable way to develop and deploy software on IoT devices. Being able to fulfill non-functional requirements as security updates is conceptionally included.</en>
+    </t></p>
+
+    <h3><t>
+        <de>§9: Wat sull dä Quatsch?</de>
+	<en>§9: Wat sull dä Quatsch? (What is it good for?)</en>
+    </t></h3>
+
+    <ol>
+        <li><t>
+            <de>Man kann Erfahrungen mit dem Entwickeln von Software für Geräte sammeln, auf die man im Zweifel keinen Zugriff hat, wenn ein Supportfall auftritt.</de>
+            <en>One can make experiences with developing of software for devices without having access to the device in case of support conditions.</en>
+        </t></li>
+        <li><t>
+            <de>Es werden Konzepte vermittelt, wie man SaaS mittels embedded Devices vertreiben kann und u.U. sogar Abrechnungsmodelle.</de>
+            <en>We'll talk about concepts using embedded devices for SaaS models, even partially for accounting.</en>
+        </t></li>
+        <li><t>
+            <de>Es können Experimente mit verschiedenen Betriebskonzepten gemacht und nachvollzogen werden (z.B. Debian auf ext4 vs. Poky auf Squashfs).</de>
+            <en>Participants can do experiments with different operation concepts (e.g. Debian using ext4 vs. Poky on squashfs).</en>
+        </t></li>
+        <li><t>
+            <de>Programmierer können bisher unbekannte Probleme erfahren und proaktive bessere Softwarequalität herstellen.</de>
+            <en>Developers could experience previously unknown problems and thus may result in proactive improved software quality.</en>
+        </t></li>
+        <li><t>
+            <de>Maintainer können erleben, was Entscheidungen für Konsequenzen erzeugen.</de>
+            <en>Maintainers could experience which decisions produces which consequences.</en>
+        </t></li>
+    </ol>
+
+    <h3><t>
+        <de>Der Workshop behandelt folgende Themenbereiche</de>
+	<en>The workshop covers following topics</en>
+    </t></h3>
+
+    <ol>
+        <li><t>
+            <de>Grundlage von Images für embedded Systeme</de>
+            <en>Basis of images for embedded systems</en>
+        </t></li>
+        <li><t>
+            <de>Kennenlernen der Infrastruktur</de>
+            <en>Becoming familiar with the infrastructure</en>
+        </t></li>
+        <li><t>
+            <de>Einloggen auf dem Buildsystem für den Workshop</de>
+            <en>Getting logged in on the build machine for the workshop</en>
+        </t></li>
+        <li><t>
+            <de>Hinzufügen einer einfachen Perl-Anwendung</de>
+            <en>Adding a simple Perl application</en>
+        </t></li>
+        <li><t>
+            <de>Erstellen eines neuen Images mit der Anwendung</de>
+            <en>Building a new image with that application</en>
+        </t></li>
+        <li><t>
+            <de>Flashen des Demo-Boards</de>
+            <en>flash the built image on the demo board</en>
+        </t></li>
+        <li><t>
+            <de>Test der Anwendung</de>
+            <en>Testing the application</en>
+        </t></li>
+        <li><t>
+            <de>Hinzufügen eines neuen Modules</de>
+            <en>Adding a new perl module</en>
+        </t></li>
+        <li><t>
+            <de>Verwendung des Modules in der Test-Anwendung</de>
+            <en>Using the newly added Perl module in the test application</en>
+        </t></li>
+        <li><t>
+            <de>Flashen und Testen</de>
+            <en>Flash and test the updated test application</en>
+        </t></li>
+        <li><t>
+            <de>eigene Schritte</de>
+            <en>individual steps</en>
+        </t></li>
+    </ol>
+
+    <h3><t>
+        <de>selbst&auml;ndiges Arbeiten</de>
+	<en>autonomous work</en>
+    </t></h3>
+
+    <p><t>
+        <de>Ab hier können die Teilnehmer verschiedene eigene Schritte ausprobieren - vom Hinzufügen einer eigenen, existierenden Anwendung über Experimente mit elektronischen Bauteilen bis hin zum Testen der eigenen Perl-Module - alles ist möglich.</de>
+	<en>Starting from here each perticipant can do several individual steps - from adding own, existing applications over experimenting with electronic components up to testing and adopting maintained Perl modules.</en>
+    </t></p>
+
+    <p><t>
+        <de>Bei Interesse kann der individuelle Abschnitt im Rahmen eines Hackathons am Samstag fortgesetzt werden.</de>
+	<en>On request the individual part can continued with in the hackathon sessions organized on Saturday.</en>
+    </t></p>
+
+    <h3><t>
+        <de>Teilnahme</de>
+	<en>Participating</en>
+    </t></h3>
+
+    <p><t>
+        <de>Mitzubringendes Arbeitsmaterial: funktionierendes vt100 Terminal, ssh-Client</de>
+        <en>Self-serviced equipment: operational vt100 terminal, ssh client</en>
+    </t></p>
+
+    <p><t>
+        <de>Da nur eine begrenzte Anzahl von Plätzen vorhanden sind, ist eine bindende Anmeldung Voraussetzung.<br />
+            Des weiteren muss zur Deckung der Betriebskosten und Hardwarebereitstellung<sup>*)</sup> ein Unkostenbeitrag erhoben werden.</de>
+	<en>Because of limited seats, a binding registration is mandatory. <br />
+            Furthermore a registration fee has to be payed to cover operational and hardware<sup>*)</sup> efforts.</en>
+    </t></p>
+
+    <p><t>
+        <de>*) gestelltes Arbeitsmaterial</de>
+        <en>*) provided equipment</en>
+    </t></p>
+
+    <table width="100%">
+    <thead>
+    <tr>
+        <td><t>
+            <de>Pos.</de>
+            <en>Pos.</en>
+        </t></td>
+        <td><t>
+            <de>Beschreibung</de>
+            <en>Description</en>
+        </t></td>
+        <td><t>
+            <de>Anzahl</de>
+            <en>Count</en>
+        </t></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td><t>
+            <de>Beaglebone Black</de>
+            <en>Beaglebone Black</en>
+        </t></td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><t>
+            <de>Beaglebone Black Gehäuse</de>
+            <en>Beaglebone Black Case</en>
+        </t></td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><t>
+            <de>Netzteil</de>
+            <en>Power Supply</en>
+        </t></td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><t>
+            <de>serielles Debugadapter</de>
+            <en>serial debug-adapter</en>
+        </t></td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><t>
+            <de>SD Karte</de>
+            <en>SD Card</en>
+        </t></td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><t>
+            <de>RJ45 Patchkabel</de>
+            <en>RJ45 patch cable</en>
+        </t></td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td><t>
+            <de>VLAN-Tagged Switch-Port für Laptop &amp; Beaglebone</de>
+            <en>VLAN-Tagged switch port for Laptop &amp; Beaglebone</en>
+        </t></td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td><t>
+            <de>Breadboard</de>
+            <en>Breadboard</en>
+        </t></td>
+        <td>2-3</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td><t>
+            <de>Sensoren</de>
+            <en>Sensors</en>
+        </t></td>
+        <td>~ 5</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td><t>
+            <de>elektronische Bauteile (Widerstände, Jumper, Kabel/Konnektoren, ...)</de>
+            <en>electronic components (resistors, jumper, cable/connectors, ...)</en>
+        </t></td>
+        <td>20-30</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p><t>
+        <de>Teilnahmegebühr Privat: 65&euro; <br />
+            Teilnahmegebühr Business: 220&euro;</de>
+        <en>participation fee (private): 65&euro;<br />
+            participation fee (business): 220&euro;</en>
+    </t></p>
+
+
+
+[% END %]
