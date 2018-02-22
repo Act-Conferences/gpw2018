@@ -45,7 +45,17 @@
                     </li> 
                                       
                     
-                    <li><a href="[% make_uri('preise.html') %]"><t><de>Ticket-Preise</de><en>Ticket Prices</en></t></a></li>
+                    <li>
+		        <a href="[% make_uri('main') %]"><t><de>Tickets</de><en>Tickets</en></t></a>
+                        <ul>
+                            <li class="lv3">
+				<a href="[% make_uri('preise.html') %]"><t><de>Preise</de><en>Prices</en></t></a>
+                            </li>                    
+                            <li class="lv3">
+				<a href="[% make_uri('purchase') %]"><t><de>Bezahlen</de><en>Purchase</en></t></a>
+                            </li>                        
+                        </ul>
+	            </li>
 
 
                     <li>
@@ -61,6 +71,24 @@
                     </li> 
 
                     
+                    <li>
+		        <a href="[% make_uri('workshops.html') %]"><t><de>Workshops</de><en>Workshops</en></t></a>
+                        <ul>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/perl6-intro.html') %]">Introduction to Perl 6</a>
+                            </li>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/migrating-to-perl6.html') %]">Migrating to Perl 6</a>
+                            </li>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/perl6-regex-and-grammars.html') %]">Perl 6 regexes and grammars</a>
+                            </li>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/embedded.html') %]">Perl on embedded Devices</a>
+                            </li>
+                        </ul>
+	            </li>
+
                     <li><a href="[% make_uri('hotels.html') %]"><t><de>Hotels &amp; Anreise</de><en>Hotels &amp; Arrivals</en></t></a></li>
                     <li>
                         <a href="[% make_uri('wiki') %]"><t><de>Wiki</de><en>Wiki</en></t></a>
