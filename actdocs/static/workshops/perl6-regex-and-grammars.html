@@ -1,0 +1,113 @@
+[% WRAPPER ui title = global.conference.name %]
+
+    <h2>Workshop: Perl 6 regexes and grammars</h2>
+
+    <p>
+      <dl>
+      <dt>Duration</dt>
+      <dd>8 hours (with 3 breaks)</dd>
+
+      <dt>Audience</dt>
+      <dd><ul>
+            <li>People with Perl 5 experience</li>
+            <li>People with Perl 6 experience</li>
+            <li>Developers with no Perl background</li>
+      </ul></dd>
+
+      <dt>Description</dt>
+      <dd>This course is primarily focused on understanding Perl 6 regexes (regular expressions) and grammars. Both regexes and grammars have many in common with the Perl 5 regexes but offer much more, and often in the more elegant way. We will be creating programs to use the most of regexes and grammars, from simple text matching to a complete compiler of an artificial programming language.</dd>
+
+      <dt>Requirements</dt>
+      <dd><ul>
+            <li>Understanding of regular regexes (in any language)</li>
+            <li>Laptop with internet</li>
+            <li>Latest Rakudo Perl 6 installed (optional)</li>
+      </ul></dd>
+
+      <dt>Contents</dt>
+      <dd><ul>
+        <li>Introduction (1 hour)</li>
+
+        <ul>
+            <li>What are regexes?</li>
+            <li>Why the new name?</li>
+            <li>What’s new in Perl 6?</li>
+            <li>What are grammars?</li>
+            <li>Perl 6 specification as a Perl 6 grammar</li>
+
+            <li>Input in Perl 6</li>
+            <ul>
+                <li>How to read from console</li>
+                <li>How to read from files</li>
+            </ul>
+        </ul>
+
+        <li>Part 1. Regexes (3 hours)</li>
+
+        <ul>
+            <li>String matching</li>
+            <li>Character classes</li>
+            <ul>
+                <li>Backslashed character classes</li>
+                <li>User-defined classes</li>
+                <li>Unicode properties</li>
+            </ul>
+            <li>Quantifiers</li>
+            <ul>
+                <li>Greediness</li>
+            </ul>
+            <li>Capturing</li>
+            <ul>
+                <li>Using [] and ()</li>
+                <li>Alternatives with || or |</li>
+                <li>The Match object</li>
+            </ul>
+            <li>Anchors</li>
+            <li>Look-ahead and backwards assertions</li>
+            <li>Adverbs (modifiers)</li>
+        </ul>
+
+        <li>Part 2. Grammars (4 hours)</li>
+    
+        <ul>
+            <li>What are grammars</li>
+            <li>Grammar is a class</li>
+            <ul>
+                <li>How to create a grammar</li>
+                <li>How to parse text with a grammar</li>
+            </ul>
+            <li>Grammar methods</li>
+            <ul>
+                <li>regex</li>
+                <li>rule</li>
+                <li>token</li>
+                <li>Reusing methods</li>
+            </ul>
+            <li>Grammar attributes</li>
+            <ul>
+                <li>Keeping state</li>
+                <li>Avoiding global variables</li>
+            </ul>
+            <li>Actions</li>
+            <ul>
+                <li>The Match object in actions</li>
+                <li>Actions as a separate class</li>
+                <li>Instantiation the actions class</li>
+            </ul>
+
+            <li>Debugging a grammar</li>
+
+            <li>Practice</li>
+            <ul>
+                <li>Creating a calculator</li>
+                <li>Parsing numbers (and how Perl 6 does it)</li>
+                <li>Parsing Esperanto</li>
+                <li>Craft-made compiler of a simple programming language</li>
+            </ul>
+        </ul>
+
+    </ul></dd>
+
+    </dl>
+    </p>
+[% END %]
