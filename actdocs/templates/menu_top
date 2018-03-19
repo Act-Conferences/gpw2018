@@ -71,24 +71,6 @@
                     </li> 
 
                     
-                    <li>
-		        <a href="[% make_uri('workshops.html') %]"><t><de>Workshops</de><en>Workshops</en></t></a>
-                        <ul>
-                            <li class="lv3">
-				<a href="[% make_uri('workshops/perl6-intro.html') %]">Introduction to Perl 6</a>
-                            </li>
-                            <li class="lv3">
-				<a href="[% make_uri('workshops/migrating-to-perl6.html') %]">Migrating to Perl 6</a>
-                            </li>
-                            <li class="lv3">
-				<a href="[% make_uri('workshops/perl6-regex-and-grammars.html') %]">Perl 6 regexes and grammars</a>
-                            </li>
-                            <li class="lv3">
-				<a href="[% make_uri('workshops/embedded.html') %]">Perl on embedded Devices</a>
-                            </li>
-                        </ul>
-	            </li>
-
                     <li><a href="[% make_uri('hotels.html') %]"><t><de>Hotels &amp; Anreise</de><en>Hotels &amp; Arrivals</en></t></a></li>
                     <li>
                         <a href="[% make_uri('wiki') %]"><t><de>Wiki</de><en>Wiki</en></t></a>
@@ -119,8 +101,26 @@
                     </li> 
 
                     <li><a href="[% make_uri('favtalks') %]"><t><de>Vorträge - Favorite Talks</de><en>Presentations - Favorite Talks</en></t></a></li>
+                    <li>
+		        <a href="[% make_uri('workshops.html') %]"><t><de>Workshops</de><en>Workshops</en></t></a>
+                        <ul>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/perl6-intro.html') %]">Introduction to Perl 6</a>
+                            </li>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/migrating-to-perl6.html') %]">Migrating to Perl 6</a>
+                            </li>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/perl6-regex-and-grammars.html') %]">Perl 6 regexes and grammars</a>
+                            </li>
+                            <li class="lv3">
+				<a href="[% make_uri('workshops/embedded.html') %]">Perl on embedded Devices</a>
+                            </li>
+                        </ul>
+	            </li>
                 </ul>
             </li>           
+
             <li class="news lv1">
                 <a href="news"><t><de>News</de><en>News</en></t></a>
             </li>
