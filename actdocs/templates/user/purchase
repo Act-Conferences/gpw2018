@@ -83,7 +83,7 @@ if (window.act) {
                   <label for="price-[% p %]-[% i.price_id %]"> [% i.name %]</td>
               <td align="right">[% i.amount %]</td>
            [% END %]
-        <td>[% IF isprome == 0 %][% currency %][% END %]</td>
+        <td>[% IF ispromo == 0 %][% currency %][% END %]</td>
         </tr>
         [% END %]
     [% END %]
